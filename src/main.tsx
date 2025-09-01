@@ -3,6 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./app/styles/index.css";
 import App from "./app/App.tsx";
 
+import { registerSW } from "virtual:pwa-register";
+
+registerSW({ immediate: true });
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
